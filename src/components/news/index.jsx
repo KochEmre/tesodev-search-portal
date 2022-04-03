@@ -7,7 +7,8 @@ const News = () => {
 
     return (
 
-        <div id="body">
+        <div id="slider-container">
+            <h1>Top News</h1>
             <HorizontalSlider cardData={newsMockupData} />
         </div>
 
