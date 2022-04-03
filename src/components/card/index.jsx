@@ -1,15 +1,13 @@
 import './Card.scss';
 
-const Card = ({ news }) => {
-  const { name, price, imageUrl } = news;
+const Card = ({ newsData }) => {
+  const { name, price, imageUrl } = newsData; //name: title, price, description
 
   return (
-    <div className='product-card-container'>
-      <img src={imageUrl} alt={`${name}`} />
-      <div className='footer'>
-        <span className='name'>{name}</span>
-        <span className='price'>{price}</span>
-      </div>
+    <div className="slider-card" >
+      <div className="slider-card-image" style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover' }}></div>
+      <p className="slider-card-title">{name}</p>
+      <p className="slider-card-description">{price}</p>
     </div>
   );
 };
