@@ -6,12 +6,10 @@ import "./news.scss";
 const News = () => {
 
     return (
-
-        <div id="slider-container">
+        <div className="slider-container">
             <h1 className="header">Top News</h1>
             <HorizontalSlider cardData={newsMockupData} />
         </div>
-
     )
 }
 
