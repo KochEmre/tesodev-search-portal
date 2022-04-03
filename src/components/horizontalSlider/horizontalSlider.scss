@@ -8,6 +8,8 @@
 #slider {
 	width: 100%;
 	height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
 	white-space: nowrap;
 	overflow-x: scroll;
 	scrollbar-width: none;
@@ -24,6 +26,7 @@
 	box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%);
 	cursor: pointer;
 	left: 0;
+    margin-bottom: 100px;
 	&:hover {
 		opacity: 1;
 	}
@@ -36,6 +39,7 @@
 	box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%);
 	cursor: pointer;
 	right: 0;
+    margin-bottom: 100px;
 	&:hover {
 		opacity: 1;
 	}
