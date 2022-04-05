@@ -1,0 +1,60 @@
+.dropdownContainer {
+    position: relative;
+    overflow: visible;
+    border: none;
+    padding: 0;
+
+    input {
+        position: relative;
+        width: 70%;
+        height: 48px;
+        outline: none;
+        border-radius: 8px;
+        padding-left: 50px;
+        border: 2px solid #204080;
+        font-size: 16px;   
+        margin-right: 10px; 
+    }
+
+    .search-icon{
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        color:#090A0A;
+        z-index: 2;
+    }
+
+    .options {
+        position: absolute;
+        top:64px;
+        left:-3%;
+        width: 84%;
+        min-width: 320px;
+        max-height: 250px;
+        z-index: 2;
+        background-color: white;
+        overflow-y: hidden;
+        cursor: pointer;
+        padding-top: 12px;
+
+        border: 1px solid #484848;
+        border-radius: 24px;
+
+        h1{
+            display: flex;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .option {
+            padding-left: 32px;
+
+            &:hover {
+                background-color: #4F75C236;
+            }
+        }
+    }
+    
+}

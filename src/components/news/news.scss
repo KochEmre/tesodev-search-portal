@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 2em;
-    margin-right: 2em;
+    width: 92%;
+
+    .header{
+        margin-left: 3em;
+        margin-bottom: 1.5em;
+        align-self: flex-start;
+    }
 }
 
-.header{
-    margin-left: 3em;
-    margin-bottom: 1.5em;
-    align-self: flex-start;
-}

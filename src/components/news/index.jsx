@@ -4,7 +4,6 @@ import HorizontalSlider from '../horizontalSlider'
 import "./news.scss";
 
 const News = () => {
-
     return (
         <div className="slider-container">
             <h1 className="header">Top News</h1>

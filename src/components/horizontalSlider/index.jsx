@@ -4,7 +4,7 @@ import "./horizontalSlider.scss"
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Card from '../card';
 
-const HorizontalSlider = (props) => {
+const HorizontalSlider = ({cardData}) => {
     const slideLeft = () => {
         var slider = document.getElementById("slider");
         slider.scrollLeft = slider.scrollLeft - 500;
@@ -20,7 +20,7 @@ const HorizontalSlider = (props) => {
             <MdChevronLeft size={40} className="slider-icon left" onClick={slideLeft} />
             <div id="slider">
                 {
-                    props.cardData.map((data) => {
+                    cardData.map((data) => {
                         return (
                             <Card key={data.id} newsData={data} />
                         )

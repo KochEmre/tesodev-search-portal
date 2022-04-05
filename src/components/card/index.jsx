@@ -1,7 +1,7 @@
 import './Card.scss';
 
 const Card = ({ newsData }) => {
-  const { title, description, imageUrl } = newsData; //name: title, price, description
+  const { title, description, imageUrl } = newsData;
 
   return (
     <div className="slider-card-container" >
