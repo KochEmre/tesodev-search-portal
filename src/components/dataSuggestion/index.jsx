@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { BiSearch } from 'react-icons/bi';
+import Button from '../button';
 import SearchFieldItem from '../searchFieldItem';
 
 import './dataSuggestion.scss';
@@ -44,7 +45,7 @@ const DataSuggestion = ({
     }, [showOptions]);
 
     return (
-        <div className="dropdownContainer" style={style} id={id} ref={dropdownRef}>
+        <div className="dropdown-container" style={style} id={id} ref={dropdownRef}>
             <div className='search-input-container'>
                 <input 
                     autoComplete="off"
@@ -57,7 +58,8 @@ const DataSuggestion = ({
                     onFocus={() => setShowOptions(true)}
                 />
                 <BiSearch size={28} className='search-icon'/>
-                <button>Search</button>
+                <Button style={{width: "15%"}}>Search</Button>
+
             </div>
             
             {showOptions && suggestingOptions.length > 0 && value.trim().length > 1 &&(
@@ -67,15 +69,15 @@ const DataSuggestion = ({
                         <div 
                             key={index} 
                             className="option"
-                            onClick={() => [setShowOptions(false), onClickShowMore(child["Name Surname"])]}
+                            onClick={() => [setShowOptions(false)]}
                         >
-                            <SearchFieldItem/>
+                            <SearchFieldItem fullname={child["Name Surname"]} city={child["City"]} country={child["Country"]}/>
                             {/* {child["Name Surname"]}
                             {child["Email"]} */}
                         </div>
                         )
                     ))}
-                    <h1>Show more...</h1>
+                    <h1 onClick={() => onClickShowMore()}>Show more...</h1>
                 </div>
             )}
         </div>

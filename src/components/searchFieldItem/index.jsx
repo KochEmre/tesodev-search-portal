@@ -1,14 +1,16 @@
 import React from 'react'
 import "./searchFieldItem.scss"
+import { IoLocationOutline } from 'react-icons/io5';
 
-const SearchFieldItem = () => {
+
+const SearchFieldItem = ({ fullname, city, country }) => {
 
   return (
     <div className='item-container'>
-        LOGO
+        <IoLocationOutline size={24}/>
         <div className='text-container'>
-            <p className="item-title">title</p>
-            <p className="item-description">description</p>
+            <p className="item-title">{fullname}</p>
+            <p className="item-description">{city}, {country}</p>
         </div>     
     </div>
   )

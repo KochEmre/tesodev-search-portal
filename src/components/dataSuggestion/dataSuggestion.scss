@@ -1,4 +1,4 @@
-.dropdownContainer {
+.dropdown-container {
     position: relative;
     overflow: visible;
     border: none;
@@ -26,7 +26,7 @@
 
     .options {
         position: absolute;
-        top:64px;
+        top:68px;
         left:-3%;
         width: 84%;
         min-width: 320px;

@@ -4,3 +4,27 @@
     align-items: center;
     justify-content: center;
 }
+
+.logo-container{
+    display: flex;
+    width: 308px;
+    flex-direction: column;
+    margin-top: 73px;
+
+    .logo-text{
+        align-self: flex-end;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 11px;
+        color: #484848;
+    }
+
+}
+
+.button-container{
+    margin-top: 64px;
+    margin-right: 62px;
+    align-self: flex-end;
+}
