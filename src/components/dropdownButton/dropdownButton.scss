@@ -1,0 +1,55 @@
+.button-class{
+    width: 126.28px;
+    height: 29.5px;
+    background-color: #F3F2F2;
+    border: 1px solid #414141;
+    box-sizing: border-box;
+    border-radius: 8px;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #484848;
+}
+
+.options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    width: 155px;
+    height: 135px;
+    z-index: 2;
+    overflow-y: hidden;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    
+    background-color: white;
+    border: 1px solid #8F8F8F;
+    box-sizing: border-box;
+    box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    
+
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 138px;
+        height: 29.94px;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: #B3B3B3;
+            color: white;
+        }
+    }
+}
