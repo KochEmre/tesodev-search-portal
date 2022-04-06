@@ -15,8 +15,6 @@ const DataSuggestion = ({
     id = "",
     placeholder = "",
 }) => {
-    const inputRef= useRef();
-    const optionsRef = useRef();
     const dropdownRef = useRef();
     const [showOptions, setShowOptions] = useState(false);
     const [suggestingOptions, setSuggestingOptions] = useState([]);
@@ -29,12 +27,6 @@ const DataSuggestion = ({
         return suggestions;
       })
     }, [options, value]);
-
-    // useEffect(() => {
-    //     if (optionsRef.current && inputRef.current) {
-    //         optionsRef.current.style.top = `${inputRef.current.offsetHeight+16}px`;
-    //     }
-    // }, []);
 
     useEffect(() => {
       document.addEventListener("mousedown", (e) => {
@@ -50,7 +42,6 @@ const DataSuggestion = ({
                 <input 
                     autoComplete="off"
                     type="text"
-                    ref={inputRef}
                     name={name} 
                     value={value}
                     placeholder={placeholder}
@@ -58,22 +49,16 @@ const DataSuggestion = ({
                     onFocus={() => setShowOptions(true)}
                 />
                 <BiSearch size={28} className='search-icon'/>
-                <Button style={{width: "15%"}}>Search</Button>
+                <Button style={{width: "15%"}} onClick={() => onClickShowMore()}>Search</Button>
 
             </div>
             
             {showOptions && suggestingOptions.length > 0 && value.trim().length > 1 &&(
-                <div ref={optionsRef} className="options">
+                <div className="options">
                     {suggestingOptions?.map((child, index) => (
                         index <3 &&(
-                        <div 
-                            key={index} 
-                            className="option"
-                            onClick={() => [setShowOptions(false)]}
-                        >
+                        <div key={index} className="option" onClick={() => [setShowOptions(false)]}>
                             <SearchFieldItem fullname={child["Name Surname"]} city={child["City"]} country={child["Country"]}/>
-                            {/* {child["Name Surname"]}
-                            {child["Email"]} */}
                         </div>
                         )
                     ))}
