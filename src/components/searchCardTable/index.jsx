@@ -16,13 +16,15 @@ const SearchCardTable = ({
                             <div className="search-item">
                                 <SearchFieldItem className="itemasd" fullname={child["Name Surname"]} city={child["City"]} country={child["Country"]} company={child["Company"]} date={child["Date"]}/>
                             </div>
-                            <hr class="divider"></hr>
+                            {index <4 &&(
+                                <hr class="divider"></hr>
+                            )}                        
                         </div>
                         )
                     ))}
                 </div>
         )}
-        
+
         {searchResult.length <=0 &&(
             <h2>Couldn't found any data</h2>
         )}
