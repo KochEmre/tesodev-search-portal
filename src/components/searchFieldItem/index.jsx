@@ -3,7 +3,7 @@ import "./searchFieldItem.scss"
 import { IoLocationOutline } from 'react-icons/io5';
 
 
-const SearchFieldItem = ({ fullname, city, country }) => {
+const SearchFieldItem = ({ fullname, city, country, company, date }) => {
 
   return (
     <div className='item-container'>

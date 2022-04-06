@@ -1,0 +1,21 @@
+.header-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 27px;
+    margin-left: 37px;
+    margin-right: 37px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    position: relative;
+    width: 510px;
+    height: 48px;
+    outline: none;
+    border-radius: 8px;
+    padding-left: 50px;
+    border: 2px solid #204080;
+    font-size: 16px;   
+    margin-right: 10px; 
+}

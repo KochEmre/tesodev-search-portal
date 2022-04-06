@@ -3,7 +3,7 @@ import Card from '../../components/card'
 import HorizontalSlider from '../../components/horizontalSlider'
 import News from '../../components/news'
 import Search from '../../components/search'
-import data from "../../data/news-mockup.json"
+import data from "../../data/news-mock-data.json"
 import "./mainPage.scss"
 import { ReactComponent as TesodevLogo } from '../../assets/largeLogo.svg';
 import Button from '../../components/button'
@@ -15,7 +15,7 @@ const Main = () => {
         <Button style={{width:"197px"}}>Add new record</Button>
       </div>
       <div className="logo-container">
-        <TesodevLogo className='logo'/>
+        <TesodevLogo/>
         <span className='logo-text'>Search app</span>
       </div>
       <Search/>

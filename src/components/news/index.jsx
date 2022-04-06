@@ -1,5 +1,5 @@
 import React from 'react'
-import newsMockupData from "../../data/news-mockup.json"
+import newsMockupData from "../../data/news-mock-data.json"
 import HorizontalSlider from '../horizontalSlider'
 import "./news.scss";
 

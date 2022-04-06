@@ -19,7 +19,7 @@ const Search = () => {
       };
 
     const showMoreClick = () => { //search input değerini alıyor.
-        navigate("/search-result")
+        navigate("/search-result",{ state: searchValue })
       };
 
   return (
