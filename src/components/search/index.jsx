@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import DataSuggestion from "../dataSuggestion/index"
+import SearchSuggestion from "../searchSuggestion/index"
 import { useNavigate } from 'react-router-dom';
 
 
@@ -31,7 +31,7 @@ const Search = () => {
   return (
     <div className='search-container'>
         <h1 className='header'>Find in records</h1>
-          <DataSuggestion
+          <SearchSuggestion
             id='search'
             name='search'
             placeholder='Search'

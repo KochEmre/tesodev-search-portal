@@ -1,9 +1,6 @@
 import React from 'react'
-import Card from '../../components/card'
-import HorizontalSlider from '../../components/horizontalSlider'
 import News from '../../components/news'
 import Search from '../../components/search'
-import data from "../../data/news-mock-data.json"
 import "./mainPage.scss"
 import { ReactComponent as TesodevLogo } from '../../assets/largeLogo.svg';
 import Button from '../../components/button'

@@ -3,9 +3,9 @@ import { BiSearch } from 'react-icons/bi';
 import Button from '../button';
 import SearchFieldItem from '../searchFieldItem';
 
-import './dataSuggestion.scss';
+import './searchSuggestion.scss';
 
-const DataSuggestion = ({
+const SearchSuggestion = ({
     name,
     value,
     onChange,
@@ -69,4 +69,4 @@ const DataSuggestion = ({
     )
 }
 
-export default DataSuggestion;
+export default SearchSuggestion;
