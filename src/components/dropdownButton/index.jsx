@@ -9,9 +9,9 @@ const DropdownButton = ({ buttonName, options, setSelectedFilter }) => {
         <div className='button-wrapper'>
             <button className='button-class' onClick={() => setShowOptions(!showOptions)}>⇅ {buttonName}</button>
             {showOptions && (
-                <div className="options">
+                <div className="options-wrapper">
                     {options?.map((child, index) => (
-                        <div key={index} className="option" onClick={(e) => [setShowOptions(false), setSelectedFilter(child)]}>
+                        <div key={index} className="option-wrapper" onClick={(e) => [setShowOptions(false), setSelectedFilter(child)]}>
                             {child}
                         </div>
                     ))}

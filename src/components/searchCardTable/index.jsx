@@ -1,14 +1,18 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Pagination from '../pagination';
 import SearchFieldItem from '../searchFieldItem'
 import "./searchCardTable.scss"
 
 const SearchCardTable = ({
     searchResult,
-
 }) => {
     let PageSize = 5;
     const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(()=>{
+        setCurrentPage(1);
+    },[searchResult]);
+
 
     const currentTableData = useMemo(() => {
         const firstPageIndex = (currentPage - 1) * PageSize;

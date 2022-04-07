@@ -15,7 +15,7 @@
     color: #484848;
 }
 
-.options {
+.options-wrapper {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     border-radius: 8px;
     
 
-    .option {
+    .option-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;

@@ -4,6 +4,7 @@ import Search from '../../components/search'
 import "./mainPage.scss"
 import { ReactComponent as TesodevLogo } from '../../assets/largeLogo.svg';
 import Button from '../../components/button'
+import MainPageFooter from '../../components/mainPageFooter';
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
       </div>
       <Search/>
       <News/>
+      <MainPageFooter/>
     </div>
   )
 }
