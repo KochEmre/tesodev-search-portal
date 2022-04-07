@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Button from '../../components/button';
 import "./searchResultPage.scss"
 import { ReactComponent as TesodevLogo } from '../../assets/largeLogo.svg';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SearchCardTable from '../../components/searchCardTable';
 import DropdownButton from '../../components/dropdownButton';
 
@@ -13,6 +13,11 @@ const SearchResultPage = () => {
 
   const [newSearchValue, setNewSearchValue] = useState(searchValue);
   const [searchResult, setSearchResult] = useState([]);
+
+  const navigate = useNavigate();
+  const goToAddLinkPage = () => {
+    navigate('/add-link');
+  };
 
   useEffect(() => {
     setSearchResult(() => {
@@ -121,9 +126,9 @@ const SearchResultPage = () => {
             placeholder={"Search"}
             onChange={(e) => onChange(e.target.value)}
           />
-          <Button style={{ width: "138px" }} onClick={() => onSearchClick()}>Search</Button>
+          <Button style={{ width: "138px" }} onClick={onSearchClick}>Search</Button>
         </div>
-        <Button style={{ width: "216px", minWidth: "170px" }}>Add new record</Button>
+        <Button style={{ width: "216px", minWidth: "170px" }} onClick={goToAddLinkPage}>Add new record</Button>
       </div>
       <div className='card-table-container'>
         <div className="card-table-wrapper">
