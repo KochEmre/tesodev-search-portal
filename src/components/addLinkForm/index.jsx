@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useForm } from '../../hooks/useForms';
 import "./addLinkForm.scss"
 import Button from '..//button/';
@@ -8,20 +8,20 @@ const AddLinkForm = () => {
         validations: {
             name: {
                 pattern: {
-                    value: '/^[a-zA-Z]{4,60}/',
-                    message: "Name should be at least 4 and maxiumum 60 characters. Only letters are allowed.",
+                    value: /^[a-zA-ZğüşöçİĞÜŞÖÇ]{4,60}/,
+                    message: "Name should be minumum 4 and maximum 60 characters. Only letters are allowed.",
                 },
             },
             country: {
                 pattern: {
-                    value: '/^[a-zA-Z]{2,60}/',
-                    message: "Country should be at least 2 and maxiumum 60 characters. Only letters are allowed.",
+                    value: /^[a-zA-ZğüşöçİĞÜŞÖÇ]{2,60}/,
+                    message: "Country should be minumum 2 and maximum 60 characters. Only letters are allowed.",
                 },
             },
             city: {
                 pattern: {
-                    value: '/^[a-zA-Z]{2,60}/',
-                    message: "City should be at least 2 and maxiumum 60 characters. Only letters are allowed.",
+                    value: /^[a-zA-ZğüşöçİĞÜŞÖÇ]{2,60}/,
+                    message: "City should be minumum 2 and maximum 60 characters. Only letters are allowed.",
                 },
                 // custom: {
                 //     isValid: (value) => value ? true:false,
@@ -37,12 +37,24 @@ const AddLinkForm = () => {
         },
         onSubmit: () => alert('User submitted!'),
     });
-    debugger;
+
+    useEffect(()=>{
+        debugger;
+        const a = !isFilled();
+        document.getElementById("add-btn").disabled = !isFilled();
+    },[data])
+
+    const isFilled = () => {
+        debugger;
+        return data.name && data.country && data.city && data.email ? true : false;
+    }
+
+
     return (
         <form className="form-wrapper" onSubmit={handleSubmit}>
             <label style={errors.name && { color: "#FF0000B2" }}>Name Surname</label>
             <input
-                style={errors.name && { borderColor: "#FF0000" }}
+                style={errors.name && { borderColor: "#FF0000"}}
                 placeholder="Enter name and surname"
                 value={data.name}
                 onChange={handleChange('name')}
@@ -77,7 +89,7 @@ const AddLinkForm = () => {
             {errors.email && <p className="error">{errors.email}</p>}
 
             <div className="submit-wrapper">
-                <Button type="submit" style={{ width: "138px" }}>Add</Button>
+                <Button id="add-btn" type="submit" style={{ width: "138px" }} >Add</Button>
             </div>
         </form>
     );

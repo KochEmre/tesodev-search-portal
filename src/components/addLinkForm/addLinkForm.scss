@@ -26,6 +26,19 @@
         font-size: 18px;
         line-height: 21px;
 
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #64646480;
+            opacity: 1; /* Firefox */
+          }
+          
+          &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #64646480;
+          }
+          
+          &::-ms-input-placeholder { /* Microsoft Edge */
+            color: #64646480;
+          }
+
         &:hover {
             background: rgba(100, 100, 100, 0.08);
             border: 2px solid rgba(72, 72, 72, 0.6);
@@ -45,6 +58,8 @@
         margin-top: 33px;
         align-self: flex-end;
     }
-
-
 }
+
+.error-class::-webkit-input-placeholder {
+    color: #b2cde0
+ }

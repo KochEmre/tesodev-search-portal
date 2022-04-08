@@ -1,6 +1,6 @@
 import "./button.scss";
 
-const Button = ({ children, ...otherProps }) => {
+const Button = ({ isdisabled, children, ...otherProps }) => {
   return (
     <button
       className="button-style"

@@ -20,7 +20,6 @@ export const useForm = (options) => {
       if (validations) {
         let valid = true;
         const newErrors = {};
-        debugger;
         for (const key in validations) {
           const value = data[key];
           const validation = validations[key];
