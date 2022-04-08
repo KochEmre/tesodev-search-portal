@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
 import "./googleMap.scss";
-import { ImLocation } from 'react-icons/im';
+//import { ImLocation } from 'react-icons/im';
 
 
 const LocationPin = ({ text }) => (

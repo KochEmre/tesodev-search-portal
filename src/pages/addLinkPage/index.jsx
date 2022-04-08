@@ -1,9 +1,14 @@
 import React from 'react'
+import AddLinkForm from '../../components/addLinkForm'
 import "./addLinkPage.scss"
 
 const AddLinkPage = () => {
   return (
-    <div>AddLinkPage</div>
+    <div className='link-page-container'>
+      <div className="form-container">
+        <AddLinkForm/>
+      </div>
+    </div>
   )
 }
 

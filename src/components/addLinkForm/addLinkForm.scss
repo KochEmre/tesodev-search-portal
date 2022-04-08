@@ -1,0 +1,50 @@
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    label{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #686868;
+        margin-top: 37px;
+    }
+
+    input{
+        background: #FFFFFF;
+        color: #484848;
+        border: 2px solid;
+        border-color: #484848;
+        border-radius: 12px;
+        height: 46px;
+        margin-top: 7px;
+        padding-left: 20px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+
+        &:hover {
+            background: rgba(100, 100, 100, 0.08);
+            border: 2px solid rgba(72, 72, 72, 0.6);
+        }    
+    }
+
+    .error{
+        color: #FF000080;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 5px;
+    }
+    
+    .submit-wrapper{
+        margin-top: 33px;
+        align-self: flex-end;
+    }
+
+
+}
