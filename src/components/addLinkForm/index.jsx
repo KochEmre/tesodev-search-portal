@@ -31,7 +31,7 @@ const AddLinkForm = () => {
             email: {
                 pattern: {
                     value: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
-                    message: "Mail address is not valid.",
+                    message: "Email address is not valid.",
                 },
             },
         },
