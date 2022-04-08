@@ -1,0 +1,12 @@
+.search-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 320px;
+
+    .header{
+        align-self: flex-start;     
+    }
+}

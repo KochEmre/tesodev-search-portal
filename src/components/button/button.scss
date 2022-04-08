@@ -1,0 +1,22 @@
+.button-style{
+    width: 138px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: #204080;
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    &:hover {
+        background-color: #4F75C2;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        background-color: #64646414;
+        color: #64646480;
+      }
+    
+}

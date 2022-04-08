@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./pages/mainPage"
+import NotFoundPage from "./pages/notFoundPage"
+import {Routes, Route} from "react-router-dom"
+import searchData from "./data/search-mock-data.json"
+import SearchResultPage from "./pages/searchResultPage"
+import AddLinkPage from "./pages/addLinkPage"
 
-function App() {
+const App = () => {
+  
+  if(localStorage.getItem("searchData") === null){
+    localStorage.setItem("searchData", JSON.stringify(searchData))
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Main/>}/>
+      <Route path="/search-result" element={<SearchResultPage/>}/>
+      <Route path="/add-link" element={<AddLinkPage/>}/>
+      <Route path="*" element={<NotFoundPage />}/>
+    </Routes>
   );
 }
 
-export default App;
+export default App

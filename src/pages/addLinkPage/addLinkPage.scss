@@ -1,0 +1,43 @@
+.link-page-container{
+    display: flex;
+    flex-direction: column;
+
+    .form-container{
+        width: 50%;
+        align-self: center;
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    
+    .header-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 27px;
+        margin-left: 37px;
+
+        .return{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &:hover{
+                cursor: pointer; 
+             }
+
+            .back-icon{
+                color: #484848;
+                margin-right: 12px;
+                margin-left: 39px;           
+            }
+    
+            .header-text{
+                color: #484848;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }        
+    }
+
+}
