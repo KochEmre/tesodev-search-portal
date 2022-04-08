@@ -10,8 +10,8 @@ const Search = () => {
     const navigate = useNavigate();
 
     // Retrieve the object from storage
-    var retrievedObject = localStorage.getItem('searchData');
-    const searchData = JSON.parse(retrievedObject);
+    var receivedStorageData = localStorage.getItem('searchData');
+    const searchData = JSON.parse(receivedStorageData);
 
     //const options = searchData.map((data => { return data['Name Surname']}));
     const onChange = (value) => { //search input değerini alıyor.
