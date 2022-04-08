@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from '../../hooks/useForms';
 import "./addLinkForm.scss"
 import Button from '..//button/';
@@ -23,10 +23,6 @@ const AddLinkForm = () => {
                     value: /^[a-zA-ZğüşöçİĞÜŞÖÇ]{2,60}/,
                     message: "City should be minumum 2 and maximum 60 characters. Only letters are allowed.",
                 },
-                // custom: {
-                //     isValid: (value) => value ? true:false,
-                //     message: "City cannot be empty",
-                // },
             },
             email: {
                 pattern: {
@@ -53,15 +49,13 @@ const AddLinkForm = () => {
         },
     });
 
-    useEffect(()=>{
-        const a = !isFilled();
-        document.getElementById("add-btn").disabled = !isFilled();
-    },[data])
-
-    const isFilled = () => {
+    const isFormFilled = () => {
         return data.fullName && data.country && data.city && data.email ? true : false;
     }
 
+    useEffect(()=>{
+        document.getElementById("add-btn").disabled = !isFormFilled();
+    },[data])
 
     return (
         <form className="form-wrapper" onSubmit={handleSubmit}>
